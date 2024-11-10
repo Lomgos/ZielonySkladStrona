@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <title>Strona</title>
@@ -10,7 +11,7 @@
 </head>
 
 <body class='bg-emerald-400'>
-    <nav class="sticky top-0 z-10 w-full items-center justify-between">
+    <nav class="sticky top-0 z-10 w-full items-center justify-between ">
         <div class="navbar bg-base-100">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -41,29 +42,58 @@
             </div>
         </div>
     </nav>
-    
+
 
 
     <main class="">
-        <div class="hero min-h-screen"
-            style="background-image: url('./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg');">
-            <div class="hero-overlay bg-opacity-25"></div>
-            <div class="hero-content text-slate-300 text-center">
-                <div class="max-w-md">
-                    <div class="bg-black bg-opacity-55 rounded-3xl">
-                        <h1 class="mb-5 text-7xl font-bold">Witaj!</h1>
-                        <p class="mb-5 text-2xl font-medium italic">
-                            Jesteśmy firmą ogrodniczą, która specjalizuje się w tworzeniu pięknych, 
-                            ogrodów dostosowanych do indywidualnych potrzeb naszych klientów. Dbamy o każdy szczegół, 
-                            aby Twój ogród stał się miejscem relaksu i odpoczynku przez cały rok.
-                        </p>
+        <section id="welcome">
+            <div class="hero min-h-screen"
+                style="background-image: url('./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg');">
+                <div class="hero-overlay bg-opacity-25"></div>
+                <div class="hero-content text-slate-300 text-center">
+                    <div class="max-w-md">
+                        <div class="bg-black bg-opacity-55 rounded-3xl">
+                            <h1 class="mb-5 text-7xl font-bold">Witaj!</h1>
+                            <p class="mb-5 text-2xl font-medium italic">
+                                Jesteśmy firmą ogrodniczą, która specjalizuje się w tworzeniu pięknych,
+                                ogrodów dostosowanych do indywidualnych potrzeb naszych klientów. Dbamy o każdy
+                                szczegół,
+                                aby Twój ogród stał się miejscem relaksu i odpoczynku przez cały rok.
+                            </p>
+                        </div>
+                        <button class="btn btn-primary"><a href="/images.html">Galeria</a></button>
                     </div>
-                    <button class="btn btn-primary"><a href="/images.html">Galeria</a></button>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section id="offer">
+
+            <div
+                class="card bg-base-100 w-96 shadow-xl my-1   hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+                <div class="card-body">
+                    <h2 class="card-title">Card title!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="card bg-base-100 w-96 shadow-xl  hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+                <div class="card-body">
+                    <h2 class="card-title">Card title!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
-    
+
 
 
     <footer class="footer bg-neutral text-neutral-content items-center p-4">
