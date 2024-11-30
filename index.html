@@ -9,6 +9,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .element {
+            position: relative;
+            transform: translateX(100vw);
+            opacity: 0;
+            transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+        }
+
+
+        .element.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .element2 {
+            position: relative;
+            transform: translateX(-100vw);
+            opacity: 0;
+            transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+        }
+
+        .element2.active {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class='bg-white'>
@@ -70,61 +101,130 @@
         <div class="min-h-[60px] bg-base-100">
             <h2 class="text-5xl text-center">Usługi</h2>
         </div>
+
+
         <section id="offer">
+            <div class="bg-white py-10 px-6">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Tekst -->
+                    <div>
+                        <h2 class="text-4xl font-bold text-green-700 mb-4">
+                            Projektowanie <span class="text-green-800 font-bold">Katowice</span>
+                        </h2>
+                        <p class="text-gray-700 mb-4">
+                            Nasza firma zajmuje się profesjonalnym <strong>projektowaniem ogrodów w Katowicach</strong>
+                            i innych miastach województwa śląskiego. Niezależnie czy jesteś prywatnym właścicielem domu
+                            z
+                            przestrzenią wokół niego czy administrujesz parkami i innymi przestrzeniami publicznymi,
+                            możemy
+                            zaprojektować atrakcyjny i przyciągający wzrok ogród.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Jesteśmy znani z tworzenia pięknych, dobrze zaplanowanych i zoptymalizowanych pod kątem
+                            dostępności
+                            i budżetu ogrodów dla <strong>mieszkańców i firm z Katowic</strong> i województwa śląskiego.
+                        </p>
+                        <p class="text-gray-700 mb-6">
+                            Nasi specjaliści doradzą w kwestii kreowania krajobrazu na Twoim podwórku lub w miejscach
+                            publicznych jak parki, skwery i wiele wiele innych.
+                        </p>
+                        <button class="btn bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800">
+                            Więcej informacji
+                        </button>
+                    </div>
+
+                    <!-- Obrazy -->
+                    <div class="space-y-6">
+                        <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                            alt="Zdjęcie ogrodu 1" class="rounded-lg shadow-lg" />
+                        <img src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                            alt="Zdjęcie ogrodu 2" class="rounded-lg shadow-lg" />
+                    </div>
+                </div>
+            </div>
+
+
+
             <section id="Ofert 1">
-                <div class="divider divider-success">Pielęgnacja ogrodów</div>
-                <div class="columns-2">
-                    <img class="h-auto w-full" src="./resources/pieleg1.jpg" loading="lazy"/>
-                    <article class="text-wrap">
-                        <h1 class="text-5xl text-center text-green-600 mb-5 mt-5 italic">Pielęgnacja ogrodów</h1>
-                        <ul class="list-disc ml-6 space-y-2 text-xl text-black">
-                            <li>Koszenie trawy</li>
-                            <li>Agregacja</li>
-                            <li>Nawozenie</li>
-                            <li>Czyszczenie ogrodów</li>
-                        </ul>
-                      </article>
+
+
+                <div class="hero bg-white min-h-60 element max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="hero-content flex-col lg:flex-row">
+                        <img src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"
+                            class="max-w-sm rounded-lg shadow-2xl space-y-6" />
+                        <div>
+                            <h2 class="text-5xl font-bold">Pielęgnacja ogrodów</h2>
+                            <p class="py-6">
+                            <ul class="list-disc ml-6 space-y-2 text-xl text-black">
+                                <li>Koszenie trawy</li>
+                                <li>Agregacja</li>
+                                <li>Nawozenie</li>
+                                <li>Czyszczenie ogrodów</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section id="Ofert 2">
-                <div class="columns-2">
-                    <article class="text-wrap">
-                        <h1 class="text-5xl text-center text-green-600 mb-5 mt-5 italic">Wycinka krzewów i drzew</h1>
-                        <ul class="list-disc ml-6 space-y-2 text-xl text-black">
-                            <li>Pierwszy podpunkt</li>
-                            <li>Drugi podpunkt</li>
-                            <li>Trzeci podpunkt</li>
-                        </ul>
-                    </article>
-                    <img class="h-auto w-full" src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"/>
+                <div class="hero bg-white min-h-2 element2 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <img src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"
+                            class="max-w-sm rounded-lg shadow-2xl space-y-6" />
+                        <div>
+                            <h1 class="text-5xl font-bold">Wycinka krzewów i drzew</h1>
+                            <p class="py-6">
+                            <ul class="list-disc ml-6 space-y-2 text-xl text-black">
+                                <li>Pierwszy podpunkt</li>
+                                <li>Drugi podpunkt</li>
+                                <li>Trzeci podpunkt</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section id="Ofert 3">
-                <div class="columns-2">
-                    <img class="h-auto w-full" src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"/>
-                    <article class="text-wrap">
-                        <h1 class="text-5xl text-center text-green-600 mb-5 mt-5 italic">Czyszczenie kostki brukowej</h1>
-                        <ul class="list-disc ml-6 space-y-2 text-xl text-black">
-                            <li>Pierwszy podpunkt</li>
-                            <li>Drugi podpunkt</li>
-                            <li>Trzeci podpunkt</li>
-                        </ul>
-                    </article>
+                <div class="hero bg-white min-h-2 element  max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="hero-content flex-col lg:flex-row">
+                        <img src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"
+                            class="max-w-sm rounded-lg shadow-2xl space-y-6" />
+                        <div>
+                            <h1 class="text-5xl font-bold">Czyszczenie kostki brukowej</h1>
+                            <p class="py-6">
+                            <ul class="list-disc ml-6 space-y-2 text-xl text-black">
+                                <li>Pierwszy podpunkt</li>
+                                <li>Drugi podpunkt</li>
+                                <li>Trzeci podpunkt</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section id="Ofert 4">
-                <div class="columns-2">
-                    <article class="text-wrap">
-                        <h1 class="text-5xl text-center text-green-600 mb-5 mt-5 italic">Pozostałe</h1>
-                        <ul class="list-disc ml-6 space-y-2 text-xl text-black">
-                            <li>Pierwszy podpunkt</li>
-                            <li>Drugi podpunkt</li>
-                            <li>Trzeci podpunkt</li>
-                        </ul>
-                    </article>
-                    <img class="h-auto w-full" src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"/>
+                <div class="hero bg-white min-h-2 element2  max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                        <img src="./resources/veronica-reverse-qYwyRF9u-uo-unsplash.jpg"
+                            class="max-w-sm rounded-lg shadow-2xl space-y-6" />
+                        <div>
+                            <h1 class="text-5xl font-bold">Pozostałe</h1>
+                            <p class="py-6">
+                            <ul class="list-disc ml-6 space-y-2 text-xl text-black">
+                                <li>Pierwszy podpunkt</li>
+                                <li>Drugi podpunkt</li>
+                                <li>Trzeci podpunkt</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+
         </section>
         <div class="min-h-[60px] bg-base-100">
             <h2 class="text-5xl text-center">Kontakt</h2>
@@ -165,6 +265,59 @@
             </a>
         </nav>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".element");
+
+            const isInViewport = (el) => {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight && rect.bottom > 0;
+            };
+
+            const handleScroll = () => {
+                if (window.scrollY === 0) {
+                    elements.forEach((el) => el.classList.remove("active"));
+                } else {
+                    elements.forEach((el) => {
+                        if (isInViewport(el)) {
+                            el.classList.add("active");
+                        }
+                    });
+                }
+            };
+
+            window.addEventListener("scroll", handleScroll);
+
+            handleScroll();
+        });
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".element2");
+
+            const isInViewport = (el) => {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight && rect.bottom > 0;
+            };
+
+            const handleScroll = () => {
+                if (window.scrollY === 0) {
+                    elements.forEach((el) => el.classList.remove("active"));
+                } else {
+                    elements.forEach((el) => {
+                        if (isInViewport(el)) {
+                            el.classList.add("active");
+                        }
+                    });
+                }
+            };
+
+            window.addEventListener("scroll", handleScroll);
+            handleScroll();
+        });
+
+    </script>
 </body>
 
 </html>
