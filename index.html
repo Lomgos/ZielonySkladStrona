@@ -111,20 +111,20 @@
                     </div>
                     <ul tabindex="0"
                         class="menu menu-sm dropdown-content bg-green-700 rounded-box z-[1] mt-3 w-52 p-2 shadow text-slate-100">
-                        <li><a>Oferta</a></li>
+                        <li><a href="#offer">Oferta</a></li>
                         <li><a href="/gallery.html">Galeria</a></li>
                         <li><a href="/prices.html">Cennik</a></li>
-                        <li><a>Kontakt</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
                     </ul>
                 </div>
                 <a class="btn btn-ghost text-xl text-slate-100">Zielony Skład</a>
             </div>
             <div class="navbar-center hidden lg:flex text-slate-100">
                 <ul class="menu menu-horizontal px-1">
-                    <li><a>Oferta</a></li>
+                    <li><a href="#offer">Oferta</a></li>
                     <li><a href="/gallery.html">Galeria</a></li>
                     <li><a href="/prices.html">Cennik</a></li>
-                    <li><a>Kontakt</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </div>
             <div class="navbar-end">
@@ -150,17 +150,14 @@
                                 aby Twój ogród stał się miejscem relaksu i odpoczynku przez cały rok.
                             </p>
                         </div>
-                        <button class="btn btn-primary"><a href="/images.html">Galeria</a></button>
+                        <button class="btn btn-primary"><a href="/gallery.html">Galeria</a></button>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="min-h-[60px] bg-green-700">
-            <h2 class="text-5xl text-center text-slate-100">Usługi</h2>
-        </div>
 
 
-        <section id="offer">
+
 
             <section class="section">
                 <div class="element">
@@ -259,58 +256,7 @@
         </nav>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const elements = document.querySelectorAll(".element");
-
-            const isInViewport = (el) => {
-                const rect = el.getBoundingClientRect();
-                return rect.top < window.innerHeight && rect.bottom > 0;
-            };
-
-            const handleScroll = () => {
-                if (window.scrollY === 0) {
-                    elements.forEach((el) => el.classList.remove("active"));
-                } else {
-                    elements.forEach((el) => {
-                        if (isInViewport(el)) {
-                            el.classList.add("active");
-                        }
-                    });
-                }
-            };
-
-            window.addEventListener("scroll", handleScroll);
-
-            handleScroll();
-        });
-
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const elements = document.querySelectorAll(".element2");
-
-            const isInViewport = (el) => {
-                const rect = el.getBoundingClientRect();
-                return rect.top < window.innerHeight && rect.bottom > 0;
-            };
-
-            const handleScroll = () => {
-                if (window.scrollY === 0) {
-                    elements.forEach((el) => el.classList.remove("active"));
-                } else {
-                    elements.forEach((el) => {
-                        if (isInViewport(el)) {
-                            el.classList.add("active");
-                        }
-                    });
-                }
-            };
-
-            window.addEventListener("scroll", handleScroll);
-            handleScroll();
-        });
-
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
