@@ -22,8 +22,8 @@
             width: 100%;
             max-width: 1000px;
             height: auto;
-            border: 1px solid #000000;
-            border-radius: 8px;
+            /* border: 1px solid #000000;
+            border-radius: 8px; */
             overflow: hidden;
             position: relative;
             transform: translateX(100vw);
@@ -50,7 +50,7 @@
         .element.active {
             transform: translateX(0);
             opacity: 1;
-        }     
+        }
 
         .element2 {
             position: relative;
@@ -62,8 +62,8 @@
             max-width: 1000px;
             max-height: 300px;
             height: auto;
-            border: 1px solid #000000;
-            border-radius: 8px;
+            /* border: 1px solid #000000;
+            border-radius: 8px; */
             overflow: hidden;
         }
 
@@ -77,10 +77,10 @@
             width: 50%;
             padding: 15px;
             display: flex;
-            text-align: center;
-            flex-wrap: wrap;
             word-break: break-word;
             justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
         }
 
         .element2.active {
@@ -137,8 +137,7 @@
 
     <main class="">
         <section id="welcome">
-            <div class="hero min-h-screen"
-                style="background-image: url('./resources/garden.jpg');">
+            <div class="hero min-h-screen" style="background-image: url('./resources/garden.jpg');">
                 <div class="hero-overlay bg-opacity-25"></div>
                 <div class="hero-content text-slate-300 text-center">
                     <div class="max-w-md">
@@ -158,78 +157,80 @@
 
         </section>
 
-        <section id="offer">
+        <section id="offer" class="overflow-x-hidden px-4">
             <section class="section">
-                <div class="element">
-                    <img src="./resources/z11.jpg" alt="Example Image">
-                    <div class="text">
-                        <p class="text-5xl font-bold text-lime-600">Opieka nad trawnikiem</p>
+                <div class="element flex flex-col items-center sm:flex-row sm:items-start">
+                    <img src="./resources/z11.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
+                    <div class="text mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Opieka nad trawnikiem</p>
                     </div>
                 </div>
             </section>
 
-            <section class="section">
-                <div class="element2">
-                    <div class="text">
-                        <p class="text-5xl font-bold text-lime-600">Wycinka drzew i krzewów</p>
+            <section class="section mt-8">
+                <div class="element2 flex flex-col-reverse items-center sm:flex-row">
+                    <div class="text mt-4 sm:mt-0 sm:mr-4 text-center sm:text-left">
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Wycinka drzew i krzewów</p>
                     </div>
-                    <img src="./resources/t1.png" alt="Example Image">
+                    <img src="./resources/t1.png" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
                 </div>
             </section>
 
-            <section class="section">
-                <div class="element">
-                    <img src="./resources/z7.jpg" alt="Example Image">
-                    <div class="text">
-                        <p class="text-5xl font-bold text-lime-600">Czyszczenie myjką ciśnieniową</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="element2">
-                    <div class="text">
-                        <p class="text-5xl font-bold text-lime-600">Malowanie</p>
-                    </div>
-                    <img src="./resources/z12.jpg" alt="Example Image">
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="element">
-                    <img src="./resources/z13.jpg" alt="Example Image">
-                    <div class="text">
-                        <p class="text-5xl font-bold text-lime-600">Pozostałe</p>
+            <section class="section mt-8">
+                <div class="element flex flex-col items-center sm:flex-row sm:items-start">
+                    <img src="./resources/z7.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
+                    <div class="text mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Czyszczenie myjką ciśnieniową</p>
                     </div>
                 </div>
             </section>
 
+            <section class="section mt-8">
+                <div class="element2 flex flex-col-reverse items-center sm:flex-row">
+                    <div class="text mt-4 sm:mt-0 sm:mr-4 text-center sm:text-left">
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Malowanie</p>
+                    </div>
+                    <img src="./resources/z12.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
+                </div>
+            </section>
+
+            <section class="section mt-8">
+                <div class="element flex flex-col items-center sm:flex-row sm:items-start">
+                    <img src="./resources/z13.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
+                    <div class="text mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Pozostałe</p>
+                    </div>
+                </div>
+            </section>
         </section>
+
 
         <div class="min-h-[60px] bg-green-700">
             <h2 class="text-5xl text-center text-slate-100">Kontakt</h2>
         </div>
 
-        <section id="contact" class="flex flex-col items-center text-center">
-            <h1 class="text-5xl font-bold text-lime-600">
+        <section id="contact" class="flex flex-col items-center text-center px-4">
+            <h1 class="text-3xl sm:text-5xl font-bold text-lime-600">
                 Jeśli chcesz w ogrodzie ład, to zadzwoń po Zielony skład!
             </h1>
-            <div class="grid grid-rows-1 grid-flow-col gap-96 py-12">
-                <div class="flex items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-12">
+                <div class="flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="green" class="size-20">
+                        stroke="green" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                     </svg>
-                    <h2 class="text-2xl font-mono">123456789</h2>
+                    <h2 class="text-xl sm:text-2xl font-mono ml-4">123456789</h2>
                 </div>
-                <div class="flex items-center">
+                <div class="flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="green" class="size-20">
+                        stroke="green" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                     </svg>
-                    <h2 class="text-2xl font-mono"><a href="mailto:Wpewo12@gmail.com">Wsdgsdgs@gmail.com</a></h2>
+                    <h2 class="text-xl sm:text-2xl font-mono ml-4">
+                        <a href="mailto:Wpewo12@gmail.com">Wsdgsdgs@gmail.com</a>
+                    </h2>
                 </div>
             </div>
         </section>
