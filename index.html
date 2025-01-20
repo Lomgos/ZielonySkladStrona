@@ -96,13 +96,17 @@
             justify-content: center;
         }
 
-        .banerText{
+        .banerText {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: #e2e0e0;
             font-size: 42px;
+        }
+
+        .hidden {
+            display: none;
         }
     </style>
 </head>
@@ -112,14 +116,14 @@
         <div class="navbar bg-gradient-to-t from-green-800 to-green-400">
             <div class="navbar-start">
                 <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <div tabindex="0" role="button" id="menuButton" class="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul tabindex="0"
+                    <ul tabindex="0" id="dropdownMenu"
                         class="menu menu-sm dropdown-content bg-green-700 rounded-box z-[1] mt-3 w-52 p-2 shadow text-slate-100">
                         <li><a href="#offer">Oferta</a></li>
                         <li><a href="/gallery.html">Galeria</a></li>
@@ -166,16 +170,16 @@
 
         </section>
 
-        <div class="min-h-[60px] bg-gradient-to-t from-green-800 to-green-400 banerText">
-            Oferta
-        </div>
-
-        <section id="offer" class="overflow-x-hidden px-4">
+        <section class="overflow-x-hidden px-4">
+            <div id="offer" class="min-h-[60px] bg-gradient-to-t from-green-800 to-green-400 banerText">
+                Oferta
+            </div>
             <section class="section">
                 <div class="element flex flex-col items-center sm:flex-row sm:items-start">
                     <img src="./resources/z11.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
                     <div class="text mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Opieka nad trawnikiem</p>
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600"><a href="/prices.html#grass"> Opieka nad
+                                trawnikiem</a></p>
                     </div>
                 </div>
             </section>
@@ -183,7 +187,8 @@
             <section class="section mt-8">
                 <div class="element2 flex flex-col-reverse items-center sm:flex-row sm:items-start">
                     <div class="text mt-4 sm:mt-0 sm:mr-4 text-center sm:text-left">
-                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Wycinka drzew i krzewów</p>
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600"><a href="/prices.html#trees">Wycinka
+                                drzew i krzewów</a></p>
                     </div>
                     <img src="./resources/t1.png" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
                 </div>
@@ -193,7 +198,8 @@
                 <div class="element flex flex-col items-center sm:flex-row sm:items-start">
                     <img src="./resources/z7.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
                     <div class="text mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Czyszczenie myjką ciśnieniową</p>
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600"><a href="/prices.html#clean">Czyszczenie
+                                myjką ciśnieniową</a></p>
                     </div>
                 </div>
             </section>
@@ -201,7 +207,8 @@
             <section class="section mt-8">
                 <div class="element2 flex flex-col-reverse items-center sm:flex-row sm:items-start">
                     <div class="text mt-4 sm:mt-0 sm:mr-4 text-center sm:text-left">
-                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Malowanie</p>
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600"><a
+                                href="/prices.html#paint">Malowanie</a></p>
                     </div>
                     <img src="./resources/z12.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
                 </div>
@@ -211,7 +218,8 @@
                 <div class="element flex flex-col items-center sm:flex-row sm:items-start">
                     <img src="./resources/z13.jpg" alt="Example Image" class="w-full max-w-sm sm:max-w-md object-cover">
                     <div class="text mt-4 sm:mt-0 sm:ml-4 text-center sm:text-left">
-                        <p class="text-3xl sm:text-5xl font-bold text-lime-600">Pozostałe</p>
+                        <p class="text-3xl sm:text-5xl font-bold text-lime-600"><a
+                                href="/prices.html#others">Pozostałe</a></p>
                     </div>
                 </div>
             </section>
@@ -235,9 +243,9 @@
                     </svg>
                     <h2 class="text-2xl sm:text-4xl font-mono ml-4">123456789</h2>
                 </div>
-            <div>
-                <img src="./resources/logo.png"  style="max-width: 500px; height: auto;">
-            </div>
+                <div>
+                    <img src="./resources/logo.png" style="max-width: 500px; height: auto;">
+                </div>
                 <div class="flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="green" class="w-14 h-14">
