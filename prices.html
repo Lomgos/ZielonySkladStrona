@@ -11,19 +11,103 @@
 </head>
 
 <style>
+   .table-container {
+    width: 70%;
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 0 2%;
+    }
+
+    .table-zebra {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        margin-bottom: 20px;
+        background-color: #f0f9f4;
+    }
+
+    .table-zebra thead th {
+        background-color: #45b66a;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .table-zebra td,
+    .table-zebra th {
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        color: #2C6B2F;
+    }
+
+    .table-separator {
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+    }
+
+    .table-separator::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 37%;
+        height: 1px;
+        background: linear-gradient(to right, #8D6E63, transparent);
+    }
+    .table-separator::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 37%;
+        height: 1px;
+        background: linear-gradient(to left, #8D6E63, transparent);
+    }
+
+    .table-separator::before {
+        left: 0;
+    }
+
+    .table-separator::after {
+        right: 0;
+    }
+
+    .separator-text {
+        background-color: #fff;
+        padding: 0 10px;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #FFB74D;
+        z-index: 1;
+    }
+
+    .table-zebra tbody tr:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .table-zebra tbody tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+
+    .table-zebra tbody tr:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
     .tables {
         border: 2px solid black;
     }
 
     .information{
         text-align: center;
-
     }
 </style>
 
-<body class='bg-green-500 font-serif'>
+<body class='bg-gradient-to-t from-white-100 to-white-500 font-serif'>
     <nav class="sticky top-0 z-10 w-full items-center justify-between ">
-        <div class="navbar bg-green-700">
+        <div class="navbar bg-gradient-to-t from-green-800 to-green-400">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -56,152 +140,187 @@
         </div>
     </nav>
 
-    <div class="text-center pt-8">
-        Pielegnacja i utrzymanie trawnika
-    </div>
-
-    <div class="overflow-x-auto mx-auto px-32">
-        <table class="table table-zebra mx-auto">
-            <thead class="tables">
+    <div class="table-container">
+        <div class="table-separator">
+            <span class="separator-text">Usługi pielęgnacji trawnika</span>
+        </div>
+        <table class="table-zebra mx-auto">
+            <thead>
                 <tr>
-                    <th class="tables">Usługa</th>
-                    <th class="tables">Jednostka</th>
-                    <th class="tables">Cena</th>
+                    <th>Usługa</th>
+                    <th>Jednostka</th>
+                    <th>Cena</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="tables">Cy Ganderton</td>
-                    <td class="tables">Quality Control Specialist</td>
-                    <td class="tables">Blue</td>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
                 </tr>
                 <tr>
-                    <td class="tables">Hart Hagerty</td>
-                    <td class="tables">Desktop Support Technician</td>
-                    <td class="tables">Purple</td>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="table-separator">
+            <span class="separator-text">Wycinka drzew i krzewów</span>
+        </div>
+        <table class="table-zebra mx-auto">
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Jednostka</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
                 </tr>
                 <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div class="table-container">
+        <div class="table-separator">
+            <span class="separator-text">Czyszczenie myjką ciśnieniową</span>
+        </div>
+        <table class="table-zebra mx-auto">
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Jednostka</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
                 </tr>
                 <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
                 </tr>
                 <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
                 </tr>
                 <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="table-separator">
+            <span class="separator-text">Malowanie</span>
+        </div>
+        <table class="table-zebra mx-auto">
+            <thead>
+                <tr>
+                    <th>Usługa</th>
+                    <th>Jednostka</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
+                </tr>
+                <tr>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <div class="text-center pt-8">
-        Wizyty konsultacyjne
-    </div>
-
-    <div class="overflow-x-auto mx-auto px-32">
-        <table class="table table-zebra mx-auto">
-            <thead class="tables">
+    <div class="table-container">
+        <div class="table-separator">
+            <span class="separator-text">Wizyta konsultancyjna</span>
+        </div>
+        <table class="table-zebra mx-auto">
+            <thead>
                 <tr>
-                    <th class="tables">Usługa</th>
-                    <th class="tables">Jednostka</th>
-                    <th class="tables">Cena</th>
+                    <th>Usługa</th>
+                    <th>Jednostka</th>
+                    <th>Cena</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="tables">Cy Ganderton</td>
-                    <td class="tables">Quality Control Specialist</td>
-                    <td class="tables">Blue</td>
+                    <td>Cy Ganderton</td>
+                    <td>Quality Control Specialist</td>
+                    <td>Blue</td>
                 </tr>
                 <tr>
-                    <td class="tables">Hart Hagerty</td>
-                    <td class="tables">Desktop Support Technician</td>
-                    <td class="tables">Purple</td>
-                </tr>
-                <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
+                    <td>Hart Hagerty</td>
+                    <td>Desktop Support Technician</td>
+                    <td>Purple</td>
                 </tr>
             </tbody>
         </table>
-    </div>
-
-    <div class="text-center pt-8">
-        Abonamanet pielęgnacyjny
-    </div>
-
-    <div class="overflow-x-auto mx-auto px-32">
-        <table class="table table-zebra mx-auto">
-            <thead class="tables">
+    
+        <div class="table-separator">
+            <span class="separator-text">Abonament</span>
+        </div>
+        <table class="table-zebra mx-auto">
+            <thead>
                 <tr>
-                    <th class="tables">Usługa</th>
-                    <th class="tables">Jednostka</th>
-                    <th class="tables">Cena</th>
+                    <th>Usługa</th>
+                    <th>Jednostka</th>
+                    <th>Cena</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="tables">Cy Ganderton</td>
-                    <td class="tables">Quality Control Specialist</td>
-                    <td class="tables">Blue</td>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
                 </tr>
                 <tr>
-                    <td class="tables">Hart Hagerty</td>
-                    <td class="tables">Desktop Support Technician</td>
-                    <td class="tables">Purple</td>
-                </tr>
-                <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
+                    <td>Brice Swyre</td>
+                    <td>Tax Accountant</td>
+                    <td>Red</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
-    <div class="text-center pt-8">
-        Abonamanet pielęgnacyjny
-    </div>
-
-    <div class="overflow-x-auto mx-auto px-32">
-        <table class="table table-zebra mx-auto">
-            <thead class="tables">
-                <tr>
-                    <th class="tables">Usługa</th>
-                    <th class="tables">Jednostka</th>
-                    <th class="tables">Cena</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tables">Cy Ganderton</td>
-                    <td class="tables">Quality Control Specialist</td>
-                    <td class="tables">Blue</td>
-                </tr>
-                <tr>
-                    <td class="tables">Hart Hagerty</td>
-                    <td class="tables">Desktop Support Technician</td>
-                    <td class="tables">Purple</td>
-                </tr>
-                <tr>
-                    <td class="tables">Brice Swyre</td>
-                    <td class="tables">Tax Accountant</td>
-                    <td class="tables">Red</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
 
     
     <div class="information pt-8">        
@@ -211,7 +330,7 @@
 
 </body>
 
-<footer class="footer bg-green-700 text-slate-100 items-center p-4">
+<footer class="footer bg-gradient-to-t from-green-800 to-green-400 text-slate-100 items-center p-4">
     <aside class="grid-flow-col items-center ">
         <p>Prawa zastrzeżone</p>
     </aside>
