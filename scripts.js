@@ -1,3 +1,19 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    menuButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!dropdownMenu.contains(event.target) && !menuButton.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(".element");
 
@@ -55,8 +71,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
 
-        const targetPosition = targetElement.offsetTop;
-        const startPosition = window.pageYOffset;
+        const targetPosition = targetElement.offsetTop - 60;
+        const startPosition = window.scrollY;
         const duration = 1500;
         let start = null;
 
